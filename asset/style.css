@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Helvetica, sans-serif;
+}
+/*Phan header*/
+.header{
+    height: 46px;
+    background: #000;
+}
+.nav, .sub-nav{
+    list-style: none;
+}
+.nav>li{
+    display: inline-block;
+    line-height: 46px;
+    position: relative;
+}
+.nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+.nav li a{
+    
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+.nav .sub-nav{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #888;
+}
+
+.nav .sub-nav a{
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+    display: block;
+}
+
+.nav .sub-nav li{
+    display: block;
+    height: 38px;
+}
+
+.nav > li:hover > a{
+    background-color: #ccc;
+    color: #000;
+}
+.nav .sub-nav li:hover a{
+    display: block;
+    background-color: #ccc;
+}
+
+.nav li:hover .sub-nav{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Phan slide*/
+.slider {
+    min-height: 500px;
+    background-color: #fcfbfb;
+}
+.content {
+
+}
+.footer {
+
+}
