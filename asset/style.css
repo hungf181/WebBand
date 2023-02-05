@@ -265,6 +265,82 @@ html{
     line-height: 1.5;
     font-size: 15px;
 }
-.footer {
-    
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    width: 900px;
+    min-height: 200px;
+    background: #fff;
+    position: relative;
+}
+.modal-heading {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.heading-icon{
+    margin-right: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    color: #fff;
+}
+.modal-close:hover {
+    opacity: 0.6;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.modal-body {
+    padding: 16px;
+}
+.modal-lable {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+.modal-input {
+    font-size: 15px;
+    border: 1px #ccc solid;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.modal-btn {
+    width: 100%;
+    background-color: #009688;
+    padding: 16px;
+    border: none;
+    color: #fff;
+    font-weight: 700px;
+    font-size: 16px;
+}
+.modal-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.modal-help {
+    padding: 16px 16px 25px;
+    text-align: right;
+    font-size: 15px;
+}
+.model-help a{
+    color: #2196F3;
 }
