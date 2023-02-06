@@ -6,6 +6,32 @@
 html{
     font-family: Helvetica, sans-serif;
 }
+/* CSS chung */
+.row{
+
+}
+
+.col{
+    float: left;
+}
+.col-hafl{
+    width: 50%;
+}
+.col-third{
+    width: 33.33333%;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.font-size-15{
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+
+
 /*Phan header*/
 .header{
     height: 46px;
@@ -95,7 +121,7 @@ html{
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/Html-css/WebBand/asset/img/chicago.jpg') top center / cover no-repeat;
+    background: url('/asset/img/la.jpg') top center / cover no-repeat;
 }
 .slider .text-content{
     color: #fff;
@@ -152,16 +178,11 @@ html{
     margin-top: 48px;
 }
 
-.content .member-item{
-    float: left;
-    width: 33.33333%;
-    text-align: center;
-}
-.content .members-list .member-name{
+.content .member-name{
     font-size: 15px;
     margin: 15px 0;
 }
-.content .members-list .member-img{
+.content .member-img{
     width: 60%;
     border-radius: 5px;
     margin: 15px 0;
@@ -206,57 +227,52 @@ html{
 }
 
 .tour-contents-list{
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 70px;
+    margin: 32px -8px 0;
+    background: none;
 }
-.tour-content{
-    width: 33.334%;
-    float: left;
-    background:none;
-}
+
 .tour-content-about{
-    width: 246px;
+    padding: 0 8px;
+}
+
+.tour-img{
+    width: 100%;
+    display: block;
+}
+.tour-img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.tour-body{
     background-color: #fff;
-    margin: 0 auto;
+    padding: 10px 15px;
+    line-height: 1.5;
 }
 
-.tour-content .tour-img{
-    width: 246px;
-}
-
-.tour-content .tour-heading{
+.tour-heading{
     font-weight: 600;
-    font-size: 15px;
-    line-height: 1.5;
-    padding: 10px 15px;
+    color: #000;
 }
-.tour-content .tour-datetime{
+
+.tour-datetime{
     font-weight: 300;
-    font-size: 15px;
     color: #ccc;
-    line-height: 1.5;
-    padding: 10px 15px;
 }
 
-.tour-content .tour-about{
+.tour-about{
     font-weight: 400;
-    font-size: 15px;
-    line-height: 1.5;
-    padding: 10px 15px;
+    color: #000;
 }
 
-.tour-content button{
+.tour-contents-list button{
     padding: 10px 15px;
-    margin: 10px 15px;
     background-color: #000;
     color: #fff;
     font-weight: 500;
-    font-size: 15px;
     border: none;
 }
-.tour-content button:hover{
+.tour-contents-list button:hover{
     background-color: #ccc;
     color: #000;
     cursor: pointer;
@@ -272,15 +288,21 @@ html{
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0.5);
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
+.modal.open {
+    display: flex;
+}
+
 .modal-content {
     width: 900px;
+    max-width: calc(100% - 32px);
     min-height: 200px;
     background: #fff;
     position: relative;
+    animation: modalFideIn ease-in .3s;
 }
 .modal-heading {
     background-color: #009688;
@@ -341,6 +363,57 @@ html{
     text-align: right;
     font-size: 15px;
 }
-.model-help a{
+.modal-help a{
     color: #2196F3;
+}
+
+@keyframes modalFideIn{
+    from{
+        transform: translateY(-140px);
+        opacity: 0;
+    }to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.contact-infor{
+    margin: 32px 0;
+}
+.contact-infor-more i {
+    margin-right: 15px;
+    line-height: 1.5;
+    font-size: 20px;
+}
+.contact-infor-more p {
+    font-weight: 600;
+}
+.form-name {
+    padding: 8px 16px;
+    margin: 10px 0;
+}
+
+.form-message{
+    padding: 8px;
+    width: 100%;
+    margin: 10px 0;
+}
+/* .row-submit{
+    position: relative;
+} */
+.form-submit{
+    float: right;
+}
+.form-submit {
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+}
+.form-submit:hover {
+    background-color: #ccc;
+    border: none;
+    color: #000;
+    cursor: pointer;
 }

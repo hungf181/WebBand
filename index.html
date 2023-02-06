@@ -66,16 +66,16 @@
                     incididunt ut labore et dolore magna aliqua. Ut enim 
                     ad minim veniam, quis nostrud exercitation ullamco 
                     laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="members-list">
-                    <div class="member-item">
+                <div class="members-list row">
+                    <div class="member-item col text-center">
                         <p class="member-name">Lê Văn Hùng</p>
                         <img src="./asset/img/bandmember.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item col text-center">
                         <p class="member-name">Trần Nhật Hoàng</p>
                         <img src="./asset/img/bandmember.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="member-item col text-center">
                         <p class="member-name">Nguyễn Quang Linh</p>
                         <img src="./asset/img/bandmember.jpg" alt="Name" class="member-img">
                     </div>
@@ -96,37 +96,42 @@
                         <li>November <span class="quantity">3</span></li>
                         
                     </ul>
-                </div>
-                <div class="tour-contents-list">
-                    <div class="tour-content">
-                        <div class="tour-content-about">
+
+                    <div class="tour-contents-list">
+                        <div class="tour-content-about col col-third">
                             <img src="./asset/img/newyork.jpg" class="tour-img">
-                            <p class="tour-heading">New York</p>
-                            <p class="tour-datetime">Fri 27 Nov 2016</p>
-                            <p class="tour-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-bnt">Buy Tickets</button>
+                            <div class="tour-body">
+                                <p class="tour-heading">New York</p>
+                                <p class="tour-datetime font-size-15">Fri 27 Nov 2016</p>
+                                <p class="tour-about font-size-15">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="buy-bnt js-buy-ticket font-size-15">Buy Tickets</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tour-content">
-                        <div class="tour-content-about">
+    
+                        <div class="tour-content-about col col-third">
                             <img src="./asset/img/sanfran.jpg" class="tour-img">
-                            <p class="tour-heading">San Francisco</p>
-                            <p class="tour-datetime">Fri 27 Nov 2016</p>
-                            <p class="tour-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-bnt">Buy Tickets</button>
+                            <div class="tour-body">
+                                <p class="tour-heading">San Francisco</p>
+                                <p class="tour-datetime font-size-15">Fri 27 Nov 2016</p>
+                                <p class="tour-about font-size-15">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="buy-bnt js-buy-ticket font-size-15">Buy Tickets</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tour-content">
-                        <div class="tour-content-about">
+                        <div class="tour-content-about col col-third">
                             <img src="./asset/img/paris.jpg" class="tour-img">
-                            <p class="tour-heading">Paris</p>
-                            <p class="tour-datetime">Fri 27 Nov 2016</p>
-                            <p class="tour-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-bnt">Buy Tickets</button>
+                            <div class="tour-body">
+                                <p class="tour-heading">Paris</p>
+                                <p class="tour-datetime font-size-15">Fri 27 Nov 2016</p>
+                                <p class="tour-about font-size-15">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="buy-bnt js-buy-ticket font-size-15">Buy Tickets</button>
+                            </div>
                         </div>
+                        
+                        <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
                 </div>
+                
+                
             </div>
 
 
@@ -134,27 +139,45 @@
             <div class="content-section">
                 <h1 class="section-heading">CONTACT</h1>
                 <p class="sub-section-heading">Fan? Drop a note!</p>
+
+
                 <div class="contact-infor">
-                    <div class="contact-infor-more">
+                    <div class="contact-infor-more col-hafl col">
                         <p class="contact-address"><i class="ti-location-pin"></i>
                             Chicago, US
                         </p>
                         <p class="contact-phone"><i class="ti-mobile"></i>
-                            Phone: +097 8686 950
+                            Phone: + 097 8686 950
                         </p>
                         <p class="contact-mail"><i class="ti-email"></i>
                             Email: hungle1881@gmail.com
                         </p>
                     </div>
-                    <div class="contact-infor-input">
-
+                    <div class="contact-infor-input col-haft col">
+                        <form action="">
+                            <div class="row">
+                                <input type="text" name="" placeholder="Name" id="" class="form-name">
+                                <input type="text" name="" placeholder="Email" id="" class="form-name">
+                            </div>
+                            <div class="row">
+                                <input type="text" name="" placeholder="Message" id="" class="form-message">
+                            </div>
+                            <div class="row-submit">
+                                <input type="submit" value="SEND" class="form-submit">
+                            </div>
+                        </form>
                     </div>
+                    <div class="clear"></div>
                 </div>
             </div>
         </div>
+
+
+
+
         <div class="modal">
-            <div class="modal-content">
-                <div class="modal-close">
+            <div class="modal-content js-modal-content">
+                <div class="modal-close js-modal-close">
                     <i class="ti-close"></i>
                 </div>
                 <header class="modal-heading">
@@ -191,6 +214,30 @@
         <div class="footer">
 
         </div>
+        <!--Js cho phần modal-->
+        <script>
+            const buyBtns = document.querySelectorAll('.js-buy-ticket')
+            const modal = document.querySelector('.modal')
+            const modalContent = document.querySelector('.js-modal-content')
+            const closeModal = document.querySelector('.js-modal-close')
+
+            for(const buyBtn of buyBtns){
+                buyBtn.addEventListener('click', function(){
+                    modal.classList.add('open')
+                })
+            }
+
+            closeModal.addEventListener('click', function(){
+                modal.classList.remove('open')
+            })
+
+            modal.addEventListener('click', hideBuyTickets)
+
+            modalContent.addEventListener('click', function(event){
+                event.stopPropagation()
+            })
+
+        </script>
     </div>
 </body>
 </html>
