@@ -7,10 +7,12 @@ html{
     font-family: Helvetica, sans-serif;
 }
 /* CSS chung */
-.row{
-
+.btn-hover:hover{
+    background-color: #ccc;
+    border: none;
+    color: #000;
+    cursor: pointer;
 }
-
 .col{
     float: left;
 }
@@ -30,7 +32,9 @@ html{
     margin-top: 15px;
 }
 
-
+.pad-32{
+    padding: 32px 0;
+}
 
 /*Phan header*/
 .header{
@@ -144,9 +148,7 @@ html{
     clear: both;
 }
 
-.content {
-    height: 700px;
-}
+
 .content .content-section{
     padding: 64px 0;
     width: 800px;
@@ -272,11 +274,7 @@ html{
     font-weight: 500;
     border: none;
 }
-.tour-contents-list button:hover{
-    background-color: #ccc;
-    color: #000;
-    cursor: pointer;
-}
+
 .contact-infor-more p{
     line-height: 1.5;
     font-size: 15px;
@@ -376,6 +374,11 @@ html{
         opacity: 1;
     }
 }
+.form-name, .form-message{
+    border: 1px solid #ccc;
+    outline: none;
+}
+
 .contact-infor{
     margin: 32px 0;
 }
@@ -397,9 +400,7 @@ html{
     width: 100%;
     margin: 10px 0;
 }
-/* .row-submit{
-    position: relative;
-} */
+
 .form-submit{
     float: right;
 }
@@ -411,9 +412,31 @@ html{
     margin: 10px 0;
     border: none;
 }
-.form-submit:hover {
-    background-color: #ccc;
-    border: none;
+.map-section img{
+    width: 100%;
+}
+
+.footer{
+    text-align: center;
+    padding: 64px 0;
+}
+
+
+.socials-list a {
+    text-decoration: none;
+    font-size: 24px;
     color: #000;
+    padding: 5px 5px;
+}
+
+.socials-list a:hover{
+    opacity: 0.5;
     cursor: pointer;
+}
+.heading-foot{
+    padding: 15px 0;
+    color: #ccc;
+}
+.heading-foot a{
+    color: #ccc;
 }
