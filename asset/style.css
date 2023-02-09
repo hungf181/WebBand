@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     font-family: Helvetica, sans-serif;
 }
 /* CSS chung */
@@ -52,7 +53,7 @@ html{
 .nav, .sub-nav{
     list-style: none;
 }
-.nav>li{
+.nav > li{
     display: inline-block;
     line-height: 46px;
     position: relative;
@@ -95,6 +96,7 @@ html{
 .nav .sub-nav li:hover a{
     display: block;
     background-color: #ccc;
+    color: #000;
 }
 
 .nav li:hover .sub-nav{
@@ -104,12 +106,18 @@ html{
 .nav .nav-angle-down{
     font-size: 13px;
 }
-
+.header .mobile-menu,
 .header .search-btn{
     float: right;
     padding: 0 21px;
 }
-
+.header .mobile-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.header .menu-icon,
 .header .search-icon{
     color: #fff;
     line-height: 46px;
@@ -119,13 +127,20 @@ html{
     cursor: pointer;
 }
 
+.header .mobile-menu:hover{
+    background-color: #ccc;
+}
+
+.header .mobile-menu:hover .menu-icon{
+    color: #000;
+}
 
 /*Phan slide*/
 .slider {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/asset/img/la.jpg') top center / cover no-repeat;
+    background: url('./img/chicago.jpg') top center / cover no-repeat;
 }
 .slider .text-content{
     color: #fff;
@@ -133,15 +148,18 @@ html{
     bottom: 40px;
     width: 100%;
     text-align: center;
+    display: block;
 }
 
 .slider .text-heading{
     font-weight: 500;
     font-size:24px;
+    text-shadow: 0 0 5px #000;
 }
 .slider .text-description{
     margin-top: 25px;
     font-size: 16px;
+    text-shadow: 0 0 5px #000;
 }
 
 .clear{
@@ -150,8 +168,9 @@ html{
 
 
 .content .content-section{
-    padding: 64px 0;
+    padding: 64px 16px;
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -179,7 +198,9 @@ html{
 .content .members-list{
     margin-top: 48px;
 }
-
+.member-item{
+    width: 33.333%;
+}
 .content .member-name{
     font-size: 15px;
     margin: 15px 0;
@@ -229,7 +250,7 @@ html{
 }
 
 .tour-contents-list{
-    margin: 32px -8px 0;
+    margin: 16px -8px 0;
     background: none;
 }
 
@@ -393,6 +414,7 @@ html{
 .form-name {
     padding: 8px 16px;
     margin: 10px 0;
+    width: 48%;
 }
 
 .form-message{
@@ -400,7 +422,9 @@ html{
     width: 100%;
     margin: 10px 0;
 }
-
+.row-contact{
+    width: 100%;
+}
 .form-submit{
     float: right;
 }
@@ -411,6 +435,10 @@ html{
     font-size: 15px;
     margin: 10px 0;
     border: none;
+}
+
+.email-btn{
+    float: right;
 }
 .map-section img{
     width: 100%;
